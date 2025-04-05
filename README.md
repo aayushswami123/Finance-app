@@ -1,124 +1,94 @@
-
-
 # Personal Finance Tracker App
 
-## Overview
+## 📱 Overview
 
-The Personal Finance Tracker App is a SwiftUI-based application designed to help users track their daily financial data. Using SwiftData for local persistence, the app enables individuals to monitor income, expenses, and savings while providing insightful financial analysis through clear visualizations.
+**Personal Finance Tracker** is an iOS application built using **SwiftUI** and **SwiftData** that helps users track their daily financial activity. With easy data entry, insightful analysis, and clear visualizations, it empowers individuals to manage income, expenses, and savings more effectively.
 
-## Features
+## ✨ Features
 
-- **Enter Financial Data:**  
-  Users can input daily figures such as total income, expenses, savings, and select an expense category (Food, Entertainment, Transportation, Rent/Mortgage, Miscellaneous). A date picker is provided so users can log the day of each entry.  
-  citeturn0file1
+- **📊 Enter Financial Data:**  
+  Users can log daily income, expenses, savings, and select an expense category (e.g., Food, Entertainment, Transportation, Rent/Mortgage, Miscellaneous). A date picker ensures accurate logging of each entry.
 
-- **View My Finances:**  
-  Displays a summary of financial activities for the most recent seven days. This feature helps users quickly review and assess their spending habits.
+- **📅 View My Finances:**  
+  Displays a summary of financial activity from the past 7 days, helping users reflect on recent spending habits.
 
-- **How Am I Doing?:**  
-  Offers personalized financial insights by analyzing the average ratios of income spent and saved. A bar chart is included to visually compare daily income and expenses, highlighting areas for potential improvement.  
-  citeturn0file4
+- **🧠 How Am I Doing?:**  
+  Analyzes your financial data and provides insights using calculated ratios. A bar chart visually compares daily income vs. expenses, highlighting areas for improvement.
 
-## Architecture
+## 🧱 Architecture
 
-This project follows the MVVM (Model-View-ViewModel) design pattern:
+This app follows the **MVVM (Model-View-ViewModel)** design pattern:
+
 - **Model:**  
-  Defined in `FinancialData.swift`, it represents the structure of the financial records including income, expenses, savings, and the expense category.  
-  citeturn0file3
+  Defined in `FinancialData.swift`. It represents financial records, including income, expenses, savings, date, and category.
 
 - **View:**  
-  The UI components are implemented using SwiftUI. Key views include:  
-  - `ContentView.swift` (main tabbed interface)  
-  - `EnterFinancialDataView.swift` (data entry form)  
-  - `InsightsView.swift` (financial insights and chart)  
-  citeturn0file0  
-  citeturn0file1  
-  citeturn0file4
+  Built with **SwiftUI**:
+  - `ContentView.swift` – Main tabbed interface  
+  - `EnterFinancialDataView.swift` – Form to input financial entries  
+  - `InsightsView.swift` – Displays analytical insights and visualizations
 
 - **ViewModel:**  
-  `FinanceViewModel.swift` manages the business logic. It handles adding records, sorting them (keeping the most recent seven days), and calculating totals and averages used for generating financial insights.  
-  citeturn0file2
+  `FinanceViewModel.swift` manages business logic: adding, sorting, filtering records, and computing insights.
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Requirements
 
-- Xcode 15 or later
-- iOS 17 or later (if running on a device)
+- Xcode 15+
+- iOS 17+
 - Swift 5
 
 ### Installation
 
-1. **Clone the Repository:**
+1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/PersonalFinanceTrackerApp.git
+   git clone https://github.com/aayushswami123/Finance-app.git
    ```
 
-2. **Open the Project:**
+2. **Open the project:**
    ```bash
    cd PersonalFinanceTrackerApp
    open PersonalFinanceTrackerApp.xcodeproj
    ```
 
-3. **Build and Run:**
-   Select your desired simulator or device in Xcode and hit **Run**.
+3. **Build and run:**  
+   Choose your simulator or connected device in Xcode and press **Run** ▶️.
 
-## How to Use
+## 🧭 How to Use
 
 - **Enter Data:**  
-  Navigate to the "Enter Data" tab to input your daily financial data. After filling in the income, expenses, savings, and selecting an expense category along with the date, tap "Save" to persist your data.
-  
+  Go to the **"Enter Data"** tab. Input income, expenses, savings, category, and date, then tap **Save** to store your data.
+
 - **View My Finances:**  
-  Check the "My Finances" tab to see a summary of the financial records for the last seven days.
+  The **"My Finances"** tab shows a summary of the past 7 days.
 
 - **Insights:**  
-  Go to the "Insights" tab to view analytical insights. The app calculates key ratios from your data and displays a message (e.g., "You are overspending!" or "You are saving well!") along with a bar chart comparing income and expenses.
-  
-## Project Structure
+  Navigate to the **"Insights"** tab to view calculated ratios and a bar chart comparing income vs. expenses, alongside personalized feedback (e.g., "You are saving well!" or "You are overspending!").
 
-- **PersonalFinanceTrackerApp.swift:**  
-  The entry point of the app which sets up the environment and the main view.  
-  citeturn0file5
+## 🗂 Project Structure
 
-- **ContentView.swift:**  
-  Organizes the primary tab view to navigate between different sections of the app.  
-  citeturn0file0
+| File                             | Description                                                                 |
+|----------------------------------|-----------------------------------------------------------------------------|
+| `PersonalFinanceTrackerApp.swift` | App entry point and environment setup                                       |
+| `ContentView.swift`              | Main UI with tab navigation                                                |
+| `EnterFinancialDataView.swift`   | View for entering new financial data                                       |
+| `InsightsView.swift`             | View showing financial insights and chart                                  |
+| `FinanceViewModel.swift`         | ViewModel with logic for data management and insights                       |
+| `FinancialData.swift`            | Model defining the structure of financial records                          |
+| `Homework2.pdf`                  | Assignment prompt and specifications that guided app development           |
 
-- **EnterFinancialDataView.swift:**  
-  Provides the form for entering daily financial data.  
-  citeturn0file1
+## 📚 External Resources
 
-- **FinanceViewModel.swift:**  
-  Implements the business logic, including data management, sorting, and insight calculations.  
-  citeturn0file2
-
-- **FinancialData.swift:**  
-  Defines the data model for financial records, including properties for income, expenses, savings, and expense categories.  
-  citeturn0file3
-
-- **InsightsView.swift:**  
-  Displays financial insights and a bar chart comparing daily income and expenses.  
-  citeturn0file4
-
-- **Homework2.pdf:**  
-  Contains the assignment details and project requirements which guided the development of this app.  
-  citeturn0file6
-
-## External Resources
-
-- [SwiftUI Documentation](https://developer.apple.com/documentation/swiftui)
-- [SwiftData Documentation](https://developer.apple.com/documentation/swiftdat)
+- [SwiftUI Documentation](https://developer.apple.com/documentation/swiftui)  
+- [SwiftData Documentation](https://developer.apple.com/documentation/swiftdata)  
 - [Swift Charts Documentation](https://developer.apple.com/documentation/charts)
 
-## License
+## 📄 License
 
-This project is open source and available under the MIT License.
+This project is licensed under the [MIT License](LICENSE).
 
-## Acknowledgements
+## 🙏 Acknowledgements
 
-- Developed as part of Homework #2.
-- Special thanks to the course instructors and provided resources for guidance and inspiration.
-
----
-
-Feel free to adjust the repository URL, license details, or any other sections as needed.
+- Developed as part of **Homework #2**.
+- Special thanks to the course instructors and Apple Developer resources for inspiration and guidance.
